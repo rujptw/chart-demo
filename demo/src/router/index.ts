@@ -1,6 +1,14 @@
+/*
+ * @Date: 2020-11-23 13:48:14
+ * @LastEditors: sam
+ * @LastEditTime: 2020-11-25 14:11:54
+ * @FilePath: /chart-demo/demo/src/router/index.ts
+ */
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
+const Charts = () => import("../views/charts.vue");
+const simpleCharts = () => import("../views/simple-charts.vue");
 
 Vue.use(VueRouter);
 
@@ -18,6 +26,16 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/charts",
+    name: "Charts",
+    component: Charts
+  },
+  {
+    path: "/simple-charts",
+    name: "simpleCharts",
+    component: simpleCharts
   }
 ];
 

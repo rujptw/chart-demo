@@ -1,3 +1,9 @@
+<!--
+ * @Date: 2020-11-23 13:48:14
+ * @LastEditors: sam
+ * @LastEditTime: 2020-11-27 15:46:18
+ * @FilePath: /chart-demo/demo/src/App.vue
+-->
 <template>
   <div id="app">
     <div id="nav">
@@ -15,6 +21,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 30px;
 }
 
 #nav {

@@ -20,14 +20,6 @@
       </li>
       <li>
         <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa"
-          target="_blank"
-          rel="noopener"
-          >pwa</a
-        >
-      </li>
-      <li>
-        <a
           href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
           target="_blank"
           rel="noopener"
@@ -119,16 +111,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() private msg!: string
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.hello {
+  font-size: 50px !important;
+  color: orange;
+}
 h3 {
   margin: 40px 0 0;
 }
