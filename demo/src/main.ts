@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-23 13:48:14
  * @LastEditors: sam
- * @LastEditTime: 2020-11-30 15:31:32
+ * @LastEditTime: 2020-12-01 13:54:52
  * @FilePath: /chart-demo/demo/src/main.ts
  */
 import Vue from 'vue'
@@ -10,13 +10,13 @@ import router from './router'
 import store from './store'
 import VCharts from 'v-charts'
 import dataV from '@jiaminghi/data-view'
-import { io } from './request.config'
+import { Socket } from './request.config'
 Vue.config.productionTip = false
 
 Vue.use(VCharts)
 Vue.use(dataV)
 
-console.log('io', io)
+Vue.prototype.$sockt = Socket
 new Vue({
   router,
   store,

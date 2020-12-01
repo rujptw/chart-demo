@@ -14,8 +14,10 @@
     "noEmitOnError": true,
     "baseUrl": ".",
     "types": ["webpack-env"],
+    // TODO:webpack配置和tsconfig.json配置均无效
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "mixins/*": ["src/mixins/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
