@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-//将socket挂载到window上以供全局使用
+// 将socket挂载到window上以供全局使用
 declare global {
   interface Window {
     $socket: any

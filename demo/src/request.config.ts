@@ -19,9 +19,7 @@ class Socket {
     reconnectionAttempts: 8,
     timeout: 30000,
   }
-  getStatus = (): boolean => {
-    return this.wsInstace ? this.wsInstace.connected : false
-  }
+  getStatus = (): boolean => (this.wsInstace ? this.wsInstace.connected : false)
   init = (opt: object): void => {
     this.config = { ...this.config, ...opt }
   }

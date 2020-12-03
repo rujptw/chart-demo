@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-01 10:11:25
  * @LastEditors: sam
- * @LastEditTime: 2020-12-01 17:16:17
+ * @LastEditTime: 2020-12-03 17:10:08
  * @FilePath: /chart-demo/demo/src/mixins/chart.mixin.ts
  */
 import { Component, Vue, Prop } from 'vue-property-decorator'
@@ -15,7 +15,7 @@ export default class chartMixin extends Vue {
   @Prop() extend?: object
   @Prop() loading!: boolean
   @Prop() empty!: boolean
-  test() {
+  test(): void {
     console.log('test')
   }
 }

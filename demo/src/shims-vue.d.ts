@@ -1,11 +1,16 @@
 /*
  * @Date: 2020-11-23 13:48:14
  * @LastEditors: sam
- * @LastEditTime: 2020-12-01 14:06:48
+ * @LastEditTime: 2020-12-03 17:33:54
  * @FilePath: /chart-demo/demo/src/shims-vue.d.ts
  */
+
 declare module '*.vue' {
   import Vue from 'vue'
+  // 需要声明接口，才能在原型上挂载
+  interface Vue {
+    $socket: any
+  }
   export default Vue
 }
 
@@ -13,3 +18,4 @@ declare module '*.vue' {
 declare module 'v-charts'
 declare module '@jiaminghi/data-view'
 declare module 'socket.io-client'
+declare module 'eslint-plugin-vue'

@@ -1,15 +1,11 @@
 <!--
  * @Date: 2020-11-23 13:48:14
  * @LastEditors: sam
- * @LastEditTime: 2020-11-27 15:46:18
+ * @LastEditTime: 2020-12-02 14:35:40
  * @FilePath: /chart-demo/demo/src/App.vue
 -->
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>

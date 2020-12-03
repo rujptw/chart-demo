@@ -1,23 +1,22 @@
 <!--
  * @Date: 2020-11-25 15:56:40
  * @LastEditors: sam
- * @LastEditTime: 2020-12-01 17:07:52
+ * @LastEditTime: 2020-12-03 13:42:50
  * @FilePath: /chart-demo/demo/src/components/base-chart.vue
 -->
 <template>
-  <div class="test-container">
-    <ve-chart
-      :data="setChart.chartData"
-      :settings="setChart.chartSettings"
-      :width="setChart.chartWidth"
-      :height="setChart.chartHeight"
-      :style="setChart.chartStyle"
-      :extend="setChart.chartExtend"
-      :loading="setChart.chartLoading"
-      :data-empty="setChart.chartEmpty"
-    ></ve-chart>
-    <!-- <ve-line :data="setChart.chartData"></ve-line> -->
-  </div>
+  <ve-chart
+    :data="setChart.chartData"
+    :settings="setChart.chartSettings"
+    :width="setChart.chartWidth"
+    :height="setChart.chartHeight"
+    :style="setChart.chartStyle"
+    :extend="setChart.chartExtend"
+    :loading="setChart.chartLoading"
+    :data-empty="setChart.chartEmpty"
+    class="base_chart--container"
+  ></ve-chart>
+  <!-- <ve-line :data="setChart.chartData"></ve-line> -->
 </template>
 
 <script lang="ts">
@@ -46,5 +45,7 @@ export default class baseChart extends mixins(chartMixin) {
 </script>
 
 <style lang="scss">
-@import '../assets/test';
+.base_chart--container {
+  position: relative;
+}
 </style>

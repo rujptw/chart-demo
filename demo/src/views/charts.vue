@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-11-12 19:30:52
  * @LastEditors: sam
- * @LastEditTime: 2020-11-27 14:56:23
+ * @LastEditTime: 2020-12-03 14:37:51
  * @FilePath: /chart-demo/demo/src/views/charts.vue
 -->
 
@@ -376,16 +376,16 @@ var series = []
       zlevel: 2,
       effect: {
         show: true,
-        period: 4, //箭头指向速度，值越小速度越快
-        trailLength: 0.02, //特效尾迹长度[0,1]值越大，尾迹越长重
-        symbol: 'arrow', //箭头图标
-        symbolSize: 3, //图标大小
+        period: 4, // 箭头指向速度，值越小速度越快
+        trailLength: 0.02, // 特效尾迹长度[0,1]值越大，尾迹越长重
+        symbol: 'arrow', // 箭头图标
+        symbolSize: 3, // 图标大小
       },
       lineStyle: {
         normal: {
-          width: 1, //尾迹线条宽度
-          opacity: 1, //尾迹线条透明度
-          curveness: 0.3, //尾迹线条曲直度
+          width: 1, // 尾迹线条宽度
+          opacity: 1, // 尾迹线条透明度
+          curveness: 0.3, // 尾迹线条曲直度
         },
       },
       data: convertData(item[1]),
@@ -395,18 +395,18 @@ var series = []
       coordinateSystem: 'geo',
       zlevel: 2,
       rippleEffect: {
-        //涟漪特效
-        period: 5, //动画时间，值越小速度越快
-        brushType: 'stroke', //波纹绘制方式 stroke, fill
-        scale: 2, //波纹圆环最大限制，值越大波纹越大
+        // 涟漪特效
+        period: 5, // 动画时间，值越小速度越快
+        brushType: 'stroke', // 波纹绘制方式 stroke, fill
+        scale: 2, // 波纹圆环最大限制，值越大波纹越大
       },
       label: {
         normal: {
           show: true,
-          position: 'right', //显示位置
-          offset: [5, 0], //偏移设置
+          position: 'right', // 显示位置
+          offset: [5, 0], // 偏移设置
           formatter: function(params) {
-            //圆环显示文字
+            // 圆环显示文字
             return params.data.name
           },
           fontSize: 13,
@@ -417,7 +417,7 @@ var series = []
       },
       symbol: 'circle',
       symbolSize: function(val) {
-        return 5 + val[2] * 1 //圆环大小
+        return 5 + val[2] * 1 // 圆环大小
       },
       itemStyle: {
         normal: {
@@ -432,7 +432,7 @@ var series = []
         }
       }),
     },
-    //被攻击点
+    // 被攻击点
     {
       type: 'scatter',
       coordinateSystem: 'geo',
@@ -446,7 +446,7 @@ var series = []
         normal: {
           show: true,
           position: 'right',
-          //offset:[5, 0],
+          // offset:[5, 0],
           color: '#0f0',
           formatter: '{b}',
           textStyle: {
@@ -482,7 +482,7 @@ export default {
       dimension: '日期',
       metrics: '访问用户',
       radius: [20, 40],
-      //offsetParent：获取带有定位的最近父元素
+      // offsetParent：获取带有定位的最近父元素
       offsetY: 120,
     }
     //     this.mapchartSettings = {
@@ -541,7 +541,7 @@ export default {
           extraCssText: 'z-index:100',
           // ticket, callback ⬇️，这个函数的参数
           formatter: function(params) {
-            //根据业务自己拓展要显示的内容
+            // 根据业务自己拓展要显示的内容
             var res = ''
             var name = params.name
             var value = params.value[params.seriesIndex + 1]
@@ -552,7 +552,7 @@ export default {
         },
         backgroundColor: '#013954',
         visualMap: {
-          //图例值控制
+          // 图例值控制
           min: 0,
           max: 20,
           calculable: true,
@@ -570,15 +570,15 @@ export default {
               show: false,
             },
           },
-          roam: false, //是否允许缩放
+          roam: false, // 是否允许缩放
           itemStyle: {
             normal: {
-              color: 'rgba(51, 69, 89, .5)', //地图背景色
-              borderColor: '#516a89', //省市边界线00fcff 516a89
+              color: 'rgba(51, 69, 89, .5)', // 地图背景色
+              borderColor: '#516a89', // 省市边界线00fcff 516a89
               borderWidth: 1,
             },
             emphasis: {
-              color: 'rgba(37, 43, 61, .5)', //悬浮背景
+              color: 'rgba(37, 43, 61, .5)', // 悬浮背景
             },
           },
         },
@@ -655,9 +655,9 @@ export default {
       let y = dt.getFullYear()
       let mt = dt.getMonth() + 1
       let day = dt.getDate()
-      let h = dt.getHours() //获取时
-      let m = dt.getMinutes() //获取分
-      let s = dt.getSeconds() //获取秒
+      let h = dt.getHours() // 获取时
+      let m = dt.getMinutes() // 获取分
+      let s = dt.getSeconds() // 获取秒
       this.time =
         y + '年' + mt + '月' + day + '日' + '-' + h + '时' + m + '分' + s + '秒'
       console.log('time', this.time)
@@ -724,7 +724,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .screen_container {
   width: 100%;
   height: 100%;
@@ -741,9 +741,9 @@ export default {
     width: 100%;
     height: 100%;
     min-width: 1000px;
-    z-index: -10;
+    z-index: 0;
     zoom: 1;
-    background-color: #fff;
+    // background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../assets/images/bg.jpg);
