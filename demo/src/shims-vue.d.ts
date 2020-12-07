@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-23 13:48:14
  * @LastEditors: sam
- * @LastEditTime: 2020-12-03 17:33:54
+ * @LastEditTime: 2020-12-04 13:54:45
  * @FilePath: /chart-demo/demo/src/shims-vue.d.ts
  */
 

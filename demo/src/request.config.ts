@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-11-30 11:44:14
  * @LastEditors: sam
- * @LastEditTime: 2020-12-01 09:26:44
+ * @LastEditTime: 2020-12-07 15:40:23
  * @FilePath: /chart-demo/demo/src/request.config.ts
  */
 import io from 'socket.io-client'
@@ -33,6 +33,10 @@ class Socket {
       this.wsInstace.on('disconnect', (reason: string) => {})
       this.wsInstace.on('connect_error', (error: object) => {})
       this.wsInstace.on('connect_timeout', (error: object) => {})
+      this.wsInstace.on('ping', () => {})
+      this.wsInstace.on('pong', (latency: number) => {
+        console.log(latency)
+      })
       return this.wsInstace
     }
   }

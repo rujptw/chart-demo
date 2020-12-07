@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-11-23 15:13:19
  * @LastEditors: sam
- * @LastEditTime: 2020-12-03 17:30:17
+ * @LastEditTime: 2020-12-04 14:12:49
  * @FilePath: /chart-demo/demo/src/views/simple-charts.vue
 -->
 <template>
@@ -94,7 +94,7 @@
               >
               </BaseChart>
             </li>
-            <div class="corner__helper">11</div>
+            <div class="corner__helper"></div>
           </ul>
         </li>
         <li class="main-item__container">
@@ -288,7 +288,8 @@ export default class simpleCharts extends Vue {
   //   console.log('newVal', nVal)
   // }
   testSocket(): void {
-    console.log('simple', this.$socket)
+    //设置this as any可以忽略类型检测
+    console.log('simple', new (this as any).$socket())
   }
 }
 </script>
